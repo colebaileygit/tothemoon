@@ -1,0 +1,151 @@
+.person-frame {
+    position: absolute;
+    left: 40vw;
+    bottom: 20vh;
+}
+
+.person-frame.girl {
+    left: calc(40vw + 50px);
+}
+
+.person-frame>.head {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: antiquewhite;
+    margin: 0 auto;
+}
+
+.head>.hair {
+    width: 30px;
+    height: 13px;
+    background-color: black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transform: rotate(-30deg);
+    transform-origin: 15px 15px;
+}
+
+.ponytail {
+    background-color: black;
+    width: 10px;
+    height: 9px;
+    border-radius: 100%;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -3px;
+    left: -2px;
+}
+
+.ponytail>.hanging {
+    background-color: black;
+    width: 5px;
+    height: 40px;
+    position: absolute;
+    left: 8px;
+    top: 2px;
+    transform: rotate(-35deg);
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.person-frame>.body {
+    width: 25px;
+    height: 50px;
+    background-color: pink;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.person-frame.jumping {
+    animation: jumping infinite 1s alternate ease-in;
+}
+
+@keyframes jumping {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-20px) }
+}
+
+.person-frame.girl.jumping {
+    animation-delay: 0.5s;
+}
+
+.girl>.body {
+    height: 46px;
+    width: 22px;
+    background-color: peru;
+}
+
+@keyframes girl-entering {
+    from { transform: rotateY(180deg) translateX(-50vw) }
+    to { transform: rotateY(180deg) translateX(0vw) }
+}
+
+.girl.entering {
+    animation-name: girl-entering;
+    animation-duration: 3s;
+    /* linear; */
+}
+
+.girl.facing {
+    transform: rotateY(0deg);
+}
+
+.person-frame>.legs {
+    height: 30px;
+}
+
+.legs>.leg {
+    position: absolute;
+    left: calc(50% - 7px);
+    width: 15px;
+    height: 30px;
+    background-color: lightseagreen;
+    border-radius: 6px;
+    animation: leg-rotate infinite 0.5s linear alternate;
+    transform-origin: top;
+}
+
+.girl>.legs>.leg {
+    background-color: darkolivegreen;
+    width: 13px;
+    left: calc(50% - 6px);
+}
+
+.leg.reverse,
+.arm.reverse {
+    animation-direction: alternate-reverse;
+}
+
+@keyframes leg-rotate {
+    from { transform: rotate(-15deg); }
+    to { transform: rotate(15deg); }
+  }
+
+.person-frame>.arm {
+    position: absolute;
+    left: calc(50% - 6px);
+    top: 35%;
+    width: 12px;
+    height: 32px;
+    background-color: antiquewhite;
+    border-radius: 6px;
+    animation: arm-rotate infinite 0.5s linear alternate;
+    transform-origin: top;
+}
+
+.girl>.arm.holding {
+    animation-iteration-count: 0;
+    transform: rotate(45deg);
+}
+
+.boy>.arm.holding {
+    animation-iteration-count: 0;
+    transform: rotate(-45deg);
+}
+
+@keyframes arm-rotate {
+    from { transform: rotate(30deg); }
+    to { transform: rotate(-30deg); }
+  }
+

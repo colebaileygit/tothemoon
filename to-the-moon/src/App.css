@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.scene-background {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+}
+
+.sky {
+  background-color: lightblue;
+  height: 80vh;
+}
+
+@font-face {
+  font-family: 'cloud-font';
+  src: url('AlphaSmoke.TTF') format('truetype');
+}
+
+.cloud-text {
+  font-family: 'cloud-font';
+  font-size: 3.5em;
+  font-weight: 500;
+  color: white;
+  padding-top: 5vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@keyframes passby {
+  from { transform: translateX(100vw) }
+  to { transform: translateX(-100vw) }
+}
+
+
+.passby {
+  animation-name: passby;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+
+.repeat {
+  animation-iteration-count: infinite;
+}
+
+.speed-8 {
+  animation-duration: 8s;
+}
+
+.delay-2000 {
+  animation-delay: 2s;
+}
