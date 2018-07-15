@@ -48,14 +48,79 @@
   font-size: 3.5em;
   font-weight: 500;
   color: white;
-  padding-top: 5vh;
+  padding-top: 3vh;
   padding-left: 10px;
   padding-right: 10px;
 }
 
+.cloud-text.dark {
+  color: black;
+  position: absolute;
+  bottom: 40vh;
+  animation: flyin 1.5s ease-out forwards;
+}
+
+.raindrop {
+  background-color: darkblue;
+  width: 2px;
+  height: 10px;
+  animation: rain infinite 1s;
+  margin-right: 10px;
+}
+
+.raindrops {
+  display: flex;
+  height: 30px;
+  width: 110px;
+  flex-flow: wrap;
+}
+
+.raindrop.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.raindrop.delay-2 {
+  animation-delay: 0.8s;
+}
+
+.raindrop.shiftx-1 {
+  margin-left: 5px;
+}
+
+.raindrop.shifty-1 {
+  margin-top: 8px;
+}
+
+@keyframes rain {
+  from { opacity: 1; transform: translateY(0px) }
+  to { opacity: 0; transform: translateY(10px) }
+}
+
+.cloud-text.dark.exit {
+  animation: shrink 1s ease-in forwards;
+  left: calc(40vw - 44px);
+  transform-origin: 60px 120px;
+}
+
+@keyframes flyin {  
+  from { left: 110vw; }
+  to { left: calc(40vw - 44px); }
+}
+
+@keyframes shrink {
+  from { transform: scale(1) }
+  to { transform: scale(0) }
+}
+
+
 @keyframes passby {
-  from { transform: translateX(100vw) }
-  to { transform: translateX(-100vw) }
+  from { opacity: 1; transform: translateX(100vw) }
+  to { opacity: 1; transform: translateX(-100vw) }
+}
+
+@keyframes flipped-passby {
+  from { opacity: 1; transform: scaleX(-1) translateX(-100vw) }
+  to { opacity: 1; transform: scaleX(-1) translateX(100vw) }
 }
 
 
@@ -75,4 +140,48 @@
 
 .delay-2000 {
   animation-delay: 2s;
+  opacity: 0;
+}
+
+.cat,
+.raccoon,
+.meerkat,
+.bridge,
+.statue-of-liberty {
+  position: absolute;
+  width: 70px;
+  bottom: 10vh;
+  left: 10vw;
+  opacity: 0;
+  animation: passby 15s forwards;
+}
+
+.cat {
+  bottom: 15vh;
+  width: 50px;
+}
+.raccoon {
+  animation-delay: 3s;
+  width: 70px;
+}
+
+.meerkat {
+  bottom: 6vh;
+  animation-delay: 6s;
+  animation-name: flipped-passby;
+}
+
+.meerkat.second {
+  bottom: 8vh;
+  animation-delay: 6.5s;
+}
+
+.statue-of-liberty {
+  width: 100px;
+  animation-delay: 4s;
+}
+
+.bridge {
+  width: 150px;
+  bottom: 22vh;
 }

@@ -1,0 +1,78 @@
+.ship-frame {
+    position: absolute;
+    right: 50px;
+    bottom: 20vh;
+}
+
+.ship-frame.entering {
+    animation-name: slidein;
+    animation-duration: 2s;
+
+}
+
+.ship-frame.exiting {
+    animation: rocking 4 0.5s alternate ease-in-out, liftoff 5s forwards;
+    transform: translateY(-100vh);
+}
+
+@keyframes slidein {
+    from { transform: translateX(180px) }
+    to { transform: translateX(0px) }
+}
+
+@keyframes rocking {
+    from { transform: rotate(5deg) }
+    to { transform: rotate(-5deg) }
+}
+
+@keyframes liftoff {
+    from {  }
+    to { bottom: 200vh; }
+}
+
+.ship-body {
+    background-color: gray;
+    width: 120px;
+    height: 200px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.ship-tank {
+    position: absolute;
+    left: 46px;
+    top: 130px;
+    background-color: #aaa;
+    width: 30px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid black;
+    /* border-top-right-radius:  */
+}
+
+.ship-window {
+    position: absolute;
+    left: 28%;
+    top: 30%;
+    background-color: lightgrey;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: solid 3px black;
+}
+
+.ship-stabilizer {
+    position: absolute;
+    background-color: lightgray;
+    width: 10px;
+    height: 30px;
+    bottom: -10px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+.ship-stabilizer.flipped {
+    transform: rotateY(180deg) translateX(-110px);
+}

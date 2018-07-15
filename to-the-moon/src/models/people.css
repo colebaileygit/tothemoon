@@ -4,6 +4,24 @@
     bottom: 20vh;
 }
 
+.boy.entering {
+    animation: boy-entering 3s forwards;
+}
+
+.boy.exiting {
+    animation: walk-forward 2s linear 1s forwards;
+}
+
+@keyframes walk-forward {
+    from { left: 40vw; }
+    to { left: 80vw; }
+}
+
+@keyframes boy-entering {
+    from { left: -10vw; }
+    to { left: 40vw; }
+}
+
 .person-frame.girl {
     left: calc(40vw + 50px);
 }
@@ -81,10 +99,19 @@
     to { transform: rotateY(180deg) translateX(0vw) }
 }
 
+@keyframes girl-exiting {
+    from { transform: translateX(0vw) }
+    to { transform: translateX(60vw) }
+}
+
 .girl.entering {
     animation-name: girl-entering;
     animation-duration: 3s;
     /* linear; */
+}
+
+.girl.exiting {
+    animation: girl-exiting 3s forwards;
 }
 
 .girl.facing {

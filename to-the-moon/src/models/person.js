@@ -8,6 +8,7 @@ class Person extends Component {
             <div className={"person-frame " 
                 + (this.props.girl ? "girl" : "boy")
                 + (this.props.entry ? " entering" : "")
+                + (this.props.exit ? " exiting": "")
                 + (this.props.facing ? " facing" : "")
                 + (this.props.jumping ? " jumping" : "")
             }>
