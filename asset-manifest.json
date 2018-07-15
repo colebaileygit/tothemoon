@@ -1,7 +1,12 @@
 {
-  "main.css": "static/css/main.a658a85a.css",
-  "main.css.map": "static/css/main.a658a85a.css.map",
-  "main.js": "static/js/main.df221e38.js",
-  "main.js.map": "static/js/main.df221e38.js.map",
-  "static/media/AlphaSmoke.TTF": "static/media/AlphaSmoke.454edc70.TTF"
+  "main.css": "static/css/main.206dfd85.css",
+  "main.css.map": "static/css/main.206dfd85.css.map",
+  "main.js": "static/js/main.d88cf26d.js",
+  "main.js.map": "static/js/main.d88cf26d.js.map",
+  "static/media/AlphaSmoke.TTF": "static/media/AlphaSmoke.454edc70.TTF",
+  "static/media/bridge.png": "static/media/bridge.ca3cc86f.png",
+  "static/media/cat.png": "static/media/cat.73713ec1.png",
+  "static/media/meerkat.png": "static/media/meerkat.4d4a83be.png",
+  "static/media/raccoon.png": "static/media/raccoon.48ed0ef1.png",
+  "static/media/statueofliberty.png": "static/media/statueofliberty.afa2acbe.png"
 }
